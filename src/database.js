@@ -2,13 +2,13 @@
 
 import { connect } from "mongoose";
 
-import { base } from './config';
+import { MONGODB_URI } from './config';
 
 
 (async()=> {
 
     try{
-        const db = await connect(base);
+        const db = await connect(MONGODB_URI);
 
         console.log('La base se es:',db.connection.name);
     }
